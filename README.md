@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-This project is a personal learning lab designed to strengthen my **full-stack development**, **data analysis**, and **cloud-native deployment** skills through hands-on practice using real-world sports data.
+This project is a personal learning lab designed to strengthen my **full-stack development**, **Mongo Aggregation** skills through hands-on practice using real-world sports data.
 
 ---
 
