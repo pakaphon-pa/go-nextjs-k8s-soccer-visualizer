@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+database:
+  host: localhost
+  username: admin
+  password: "123456789"
+  port: "32017"
