@@ -2,15 +2,14 @@ package services
 
 import "go-mongo/internal/repository"
 
-
-
 type (
 	Service struct {
-
+		playerRepository repository.IPlayerRepository
 	}
-
 )
 
-func NewService(repository *repository.Repository) *Service {
-	return &Service{}
+func NewService(repo *repository.Repository) *Service {
+	return &Service{
+		playerRepository: repository.NewPlayerRepository(repo),
+	}
 }

@@ -1,15 +1,13 @@
 FROM golang:1.24.4-alpine AS builder
 
-ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64
-
 WORKDIR /app
 
 COPY go.mod go.sum ./
-RUN go mod downloand
+RUN go mod download
 
-COPY . .
+COPY . ./
 
-RUN go build -a -installsuffix cgo -o bin/app cmd/main.go
+RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o bin/app cmd/main.go
 
 FROM alpine:latest
 

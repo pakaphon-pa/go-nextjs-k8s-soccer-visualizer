@@ -13,7 +13,8 @@ import (
 
 type (
 	Repository struct {
-		DB *mongo.Client
+		Client *mongo.Client
+		DB     *mongo.Database
 	}
 )
 
@@ -50,6 +51,7 @@ func NewRepository(config *infrastructure.Config) *Repository {
 	fmt.Println("Database connection Successfully")
 
 	return &Repository{
-		DB: client,
+		Client: client,
+		DB:     client.Database("transfermarket"),
 	}
 }

@@ -59,7 +59,7 @@ func main() {
 
 	ctx, cancel = context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-	if err := connection.DB.Disconnect(ctx); err != nil {
+	if err := connection.Client.Disconnect(ctx); err != nil {
 		e.Logger.Fatal(err)
 	} else {
 		fmt.Println("MongoDB Disconnected")

@@ -1,3 +1,7 @@
+build-image:
+	@echo "Build docker image"
+	(cd backend && docker build . -t backend)
+
 k8s-deploy:
 	@echo "k8s deployment"
 	kubectl apply -f deploy/namespace.yml

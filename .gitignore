@@ -1,0 +1,12 @@
+# Ignore node_modules inside frontend folder only
+/frontend/node_modules/
+
+# Ignore env files (if any)
+*.env
+
+# Ignore build output
+/frontend/.next/
+/frontend/out/
+
+# Ignore logs
+*.log
