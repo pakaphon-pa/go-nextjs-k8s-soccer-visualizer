@@ -1,13 +1,14 @@
 build-image:
 	@echo "Build docker image"
+	(cd frontend && docker build . -t frontend)
 	(cd backend && docker build . -t backend)
 
-k8s-deploy:
+k8s-deploy: build-image
 	@echo "k8s deployment"
 	kubectl apply -f deploy/namespace.yml
 	kubectl apply -f deploy/
 	
-k8s-clear:
+k8s-clear: 
 	@echo "clear k8s deployment"
 	kubectl delete all --all -n learning
 	kubectl delete pvc --all -n learning
