@@ -10,8 +10,8 @@ This project is a personal learning lab designed to strengthen my **full-stack d
 
 - [ ] 🧩 **Frontend Dashboard** — Interactive data visualization UI
 - [ ] ⚙️ **Backend API** — Aggregation logic and data exposure
-- [ ] 🧵 **MongoDB StatefulSet** — Persistent data storage in Kubernetes
-- [ ] 🚢 **Local Kubernetes Deployment** — Fully containerized with Colima
+- [x] 🧵 **MongoDB StatefulSet** — Persistent data storage in Kubernetes
+- [x] 🚢 **Local Kubernetes Deployment** — Fully containerized with Colima
 
 ---
 

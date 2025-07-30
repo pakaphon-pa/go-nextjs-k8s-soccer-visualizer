@@ -15,6 +15,7 @@ type (
 
 	ServerConfig struct {
 		Port string `mapstructure:"port"`
+		Env  string `mapstructure:"env"`
 	}
 
 	DatabaseConfig struct {

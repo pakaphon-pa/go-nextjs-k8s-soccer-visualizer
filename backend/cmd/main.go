@@ -34,7 +34,7 @@ func main() {
 	e := echo.New()
 
 	version := e.Group("/v1")
-	version.GET("/health-check", func(c echo.Context) error {
+	version.GET("/healthz", func(c echo.Context) error {
 		return c.NoContent(http.StatusOK)
 	})
 

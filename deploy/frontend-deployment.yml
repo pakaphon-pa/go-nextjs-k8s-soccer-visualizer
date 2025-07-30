@@ -33,21 +33,3 @@ spec:
       nodePort: 30001
   selector:
     app: frontend-nginx
----
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: nextjs-nginx-ingress
-#   namespace: learning
-# spec:
-#   rules:
-#     - host: local-player.local
-#       http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: frontend-nginx-service
-#                 port:
-#                   number: 80
